@@ -7,6 +7,8 @@ defmodule TaksoWeb.Router do
 
   scope "/api", TaksoWeb do
     pipe_through :api
+
+    post "/bookings", BookingController, :create
   end
 
   # Enable LiveDashboard in development
